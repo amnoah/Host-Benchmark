@@ -45,7 +45,7 @@ public class BenchmarkPlugin extends Extension {
      */
     @Override
     public void terminate() {
-        minestomBridge.stop();
+        minestomBridge.stopCore();
         minestomBridge = null;
     }
 }

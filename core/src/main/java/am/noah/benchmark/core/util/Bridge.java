@@ -44,21 +44,25 @@ public class Bridge {
      * Run when a native Player Join Event has been called to pass it along to the Core.
      */
     public void joinEvent() {
-        benchmark.getInvalidTest().joinEvent();
+        log(benchmark.getInvalidTest().getPlayerJoinResponse());
+        shutdown();
     }
 
     /**
      * Run in order to inform the Core of the amount of plugins present on the server.
      */
     public void pluginListSize(int size) {
-        if (size > 1) benchmark.getInvalidTest().pluginsInstalled();
+        if (size > 1) {
+            log(benchmark.getInvalidTest().getExcessivePluginsResponse());
+            shutdown();
+        }
     }
 
     /**
      * Run in order to inform the Core of a server closing event.
      */
-    public void stop() {
-        benchmark.getTickManager().stop();
-        if (!(benchmark.getStageManager() instanceof PostStage)) benchmark.getInvalidTest().earlyShutdown();
+    public void stopCore() {
+        benchmark.getTimerManager().stopTimer();
+        if (!(benchmark.getStageManager() instanceof PostStage)) log(benchmark.getInvalidTest().getEarlyShutdownResponse());
     }
 }

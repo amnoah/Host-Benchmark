@@ -2,7 +2,7 @@ package am.noah.benchmark.core;
 
 import am.noah.benchmark.core.manager.stage.StageManager;
 import am.noah.benchmark.core.manager.stage.type.PreStage;
-import am.noah.benchmark.core.manager.tick.TickManager;
+import am.noah.benchmark.core.manager.timer.TimerManager;
 import am.noah.benchmark.core.util.Bridge;
 import am.noah.benchmark.core.util.InvalidTest;
 
@@ -15,7 +15,7 @@ public class Benchmark {
     private final Bridge bridge;
     private final InvalidTest invalidTest;
 
-    private final TickManager tickManager;
+    private final TimerManager timerManager;
     private StageManager stageManager;
 
     /**
@@ -25,12 +25,10 @@ public class Benchmark {
         this.serverVersion = serverVersion;
 
         this.bridge = bridge;
-        invalidTest = new InvalidTest(this);
+        invalidTest = new InvalidTest();
 
-        tickManager = new TickManager();
+        timerManager = new TimerManager();
         stageManager = new PreStage(this);
-
-        tickManager.start();
     }
 
     /*
@@ -61,10 +59,10 @@ public class Benchmark {
     }
 
     /**
-     * Return the TickManager object stored within this class.
+     * Return the TimerManager object stored within this class.
      */
-    public TickManager getTickManager() {
-        return tickManager;
+    public TimerManager getTimerManager() {
+        return timerManager;
     }
 
     /**

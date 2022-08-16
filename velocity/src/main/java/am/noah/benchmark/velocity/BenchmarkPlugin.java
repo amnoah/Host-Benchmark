@@ -10,7 +10,7 @@ import com.velocitypowered.api.plugin.Plugin;
 import com.velocitypowered.api.proxy.ProxyServer;
 import org.slf4j.Logger;
 
-@Plugin(id = "benchmark", name = "Benchmark", version = "0.1", description = "A benchmark plugin for Minecraft.", authors = {"am noah"})
+@Plugin(id = "benchmark", name = "Benchmark", version = "0.2", description = "A benchmark plugin for Minecraft.", authors = {"am noah"})
 public class BenchmarkPlugin {
 
     private final Logger logger;
@@ -77,7 +77,7 @@ public class BenchmarkPlugin {
      */
     @Subscribe
     public void onProxyShutdown(ProxyShutdownEvent event) {
-        velocityBridge.stop();
+        velocityBridge.stopCore();
         velocityBridge = null;
     }
 }

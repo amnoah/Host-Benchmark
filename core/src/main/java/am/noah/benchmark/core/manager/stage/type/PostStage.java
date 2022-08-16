@@ -2,7 +2,6 @@ package am.noah.benchmark.core.manager.stage.type;
 
 import am.noah.benchmark.core.Benchmark;
 import am.noah.benchmark.core.manager.stage.StageManager;
-import am.noah.benchmark.core.util.tickable.Tickable;
 
 public class PostStage extends StageManager {
 
@@ -15,8 +14,5 @@ public class PostStage extends StageManager {
 
         // Shut down the server as we're finished.
         benchmark.getBridge().shutdown();
-
-        // Prevents a console error.
-        benchmark.getTickManager().addTickable(new Tickable());
     }
 }

@@ -1,5 +1,5 @@
-name: BenchmarkPlugin
-version: 0.1
+name: Benchmark
+version: 0.2
 author: am noah
 description: A benchmark plugin for Minecraft.
 api-version: 1.13

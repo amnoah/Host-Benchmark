@@ -3,7 +3,6 @@ package am.noah.benchmark.core.manager.stage.type;
 import am.noah.benchmark.core.Benchmark;
 import am.noah.benchmark.core.manager.stage.StageManager;
 import am.noah.benchmark.core.manager.test.TestManager;
-import am.noah.benchmark.core.util.tickable.type.Countdown;
 
 public class SingleStage extends StageManager {
 
@@ -15,8 +14,8 @@ public class SingleStage extends StageManager {
 
         benchmark.getBridge().log("Starting the Single Thread Benchmark. This will take 2.5 minutes");
 
-        // Add the Countdown to the TickManager.
-        benchmark.getTickManager().addTickable(new Countdown(benchmark, 150));
+        // Start a new Timer to end the stage.
+        benchmark.getTimerManager().newTimer(benchmark, 150);
 
         setTestManager(new TestManager(1));
     }

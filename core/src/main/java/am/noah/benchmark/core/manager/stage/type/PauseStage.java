@@ -2,7 +2,6 @@ package am.noah.benchmark.core.manager.stage.type;
 
 import am.noah.benchmark.core.Benchmark;
 import am.noah.benchmark.core.manager.stage.StageManager;
-import am.noah.benchmark.core.util.tickable.type.Countdown;
 
 public class PauseStage extends StageManager {
 
@@ -16,7 +15,7 @@ public class PauseStage extends StageManager {
         benchmark.getBridge().log("");
 
         // Add the Countdown to the TickManager.
-        benchmark.getTickManager().addTickable(new Countdown(benchmark, 10));
+        benchmark.getTimerManager().newTimer(benchmark, 10);
     }
 
     /**

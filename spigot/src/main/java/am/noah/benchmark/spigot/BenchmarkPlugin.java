@@ -45,7 +45,7 @@ public class BenchmarkPlugin extends JavaPlugin {
      */
     @Override
     public void onDisable() {
-        spigotBridge.stop();
+        spigotBridge.stopCore();
         spigotBridge = null;
     }
 }

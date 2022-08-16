@@ -45,7 +45,7 @@ public class BenchmarkPlugin extends Plugin {
      */
     @Override
     public void onDisable() {
-        bungeecordBridge.stop();
+        bungeecordBridge.stopCore();
         bungeecordBridge = null;
     }
 }

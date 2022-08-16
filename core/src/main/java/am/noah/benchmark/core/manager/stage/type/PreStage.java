@@ -3,7 +3,6 @@ package am.noah.benchmark.core.manager.stage.type;
 import am.noah.benchmark.core.Benchmark;
 import am.noah.benchmark.core.manager.stage.StageManager;
 import am.noah.benchmark.core.util.Bridge;
-import am.noah.benchmark.core.util.tickable.type.Countdown;
 import oshi.SystemInfo;
 import oshi.hardware.HWDiskStore;
 import oshi.hardware.HardwareAbstractionLayer;
@@ -19,8 +18,8 @@ public class PreStage extends StageManager {
 
         benchmark.getBridge().log("Pausing for 10 seconds to let CPU usage normalize.");
 
-        // Add the Countdown to the TickManager.
-        benchmark.getTickManager().addTickable(new Countdown(benchmark, 10));
+        // Start a new Timer to end the stage.
+        benchmark.getTimerManager().newTimer(benchmark, 10);
     }
 
     /**
