@@ -91,8 +91,4 @@ public class Benchmark {
     public void setStageManager(StageManager stageManager) {
         this.stageManager = stageManager;
     }
-
-    /*
-     *
-     */
 }

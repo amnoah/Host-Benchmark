@@ -36,6 +36,7 @@ public class TestManager {
     public long finish() {
         // Turn off all of the tests to save performance.
         for (Test test : activeTests) {
+            String unused = test.getIntensiveString();
             test.stop();
         }
 

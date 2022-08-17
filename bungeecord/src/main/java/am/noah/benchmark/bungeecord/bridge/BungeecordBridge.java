@@ -28,7 +28,7 @@ public class BungeecordBridge extends Bridge {
      * Shut down the server when the Core calls for it.
      */
     @Override
-    public void shutdown() {
+    public void stopServer() {
         plugin.getProxy().stop();
     }
 }

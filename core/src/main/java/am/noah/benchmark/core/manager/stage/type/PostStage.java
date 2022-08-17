@@ -13,6 +13,6 @@ public class PostStage extends StageManager {
         benchmark.getBridge().log("");
 
         // Shut down the server as we're finished.
-        benchmark.getBridge().shutdown();
+        benchmark.getBridge().stopServer();
     }
 }

@@ -5,6 +5,7 @@ import java.util.concurrent.atomic.LongAdder;
 public class Test implements Runnable {
 
     LongAdder runCounter;
+    String intensive = "IntensiveBehavior";
 
     boolean testActive = true;
 
@@ -17,14 +18,24 @@ public class Test implements Runnable {
 
     /**
      * This is meant to be extremely intensive... and it is!
-     * This stress tests the CPU seriously... per counted run it must run the code 16,777,216 times!
+     * This stress tests the CPU seriously... per counted run it must run the code 262,144 times!
      */
     @Override
     public void run() {
+        String pastResult = intensive;
+
         while (testActive) {
-            for (int a = 0; a < 16777216; a++) {
-                final double intensive = Math.hypot(Math.PI, Math.PI);
+
+            for (int i = 0; i < 100000; i++) {
+                intensive = intensive.replaceAll("[0-9]", "");
+                intensive = intensive + i;
+                intensive = new StringBuilder(intensive).reverse().toString();
+                String endHalf = pastResult.substring(0, (pastResult.length() / 2) - 1);
+                intensive = intensive.substring((intensive.length() / 2) - 1);
+                intensive = endHalf + intensive;
             }
+
+            pastResult = intensive;
 
             runCounter.increment();
         }
@@ -37,5 +48,12 @@ public class Test implements Runnable {
      */
     public void stop() {
         testActive = false;
+    }
+
+    /**
+     * Make the JVM believe that the Intensive String is actually used.
+     */
+    public String getIntensiveString() {
+        return intensive;
     }
 }

@@ -26,13 +26,13 @@ public class Bridge {
      * Allow extending classes to Override this void, letting them log whatever is sent.
      */
     public void log(Object object) {
-        // UNused
+        // Unused
     }
 
     /**
      * Allow extending classes to Override this void, letting them handle shutting down on whichever platform.
      */
-    public void shutdown() {
+    public void stopServer() {
         // Unused
     }
 
@@ -45,7 +45,7 @@ public class Bridge {
      */
     public void joinEvent() {
         log(benchmark.getInvalidTest().getPlayerJoinResponse());
-        shutdown();
+        stopServer();
     }
 
     /**
@@ -54,7 +54,7 @@ public class Bridge {
     public void pluginListSize(int size) {
         if (size > 1) {
             log(benchmark.getInvalidTest().getExcessivePluginsResponse());
-            shutdown();
+            stopServer();
         }
     }
 
