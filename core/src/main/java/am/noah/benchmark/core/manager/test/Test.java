@@ -18,7 +18,7 @@ public class Test implements Runnable {
 
     /**
      * This is meant to be extremely intensive... and it is!
-     * This stress tests the CPU seriously... per counted run it must run the code 262,144 times!
+     * This stress tests the CPU seriously... per counted run it must run the code 100,000 times!
      */
     @Override
     public void run() {
