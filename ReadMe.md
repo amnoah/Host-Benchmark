@@ -13,6 +13,10 @@ In the future I may attempt to add more applicable tests to the plugin, includin
 - [Create a discussion in the Submit Scores section of the Discussions page following the formatting rules](https://github.com/amnoah/Minecraft-Server-Benchmark/discussions/categories/submit-scores).
 - Note: Any posts not following proper formatting will be removed.
 
+# Join our Discord
+
+You can join the Discord server in order to discuss/help with the Minecraft Server Benchmark plugin at [https://discord.gg/gkm35QgpZF](https://discord.gg/gkm35QgpZF).
+
 # How to Use
 
 - Download the Jar executable corresponding to your server/proxy platform of choice.
