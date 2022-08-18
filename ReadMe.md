@@ -9,7 +9,7 @@ In the future I may attempt to add more applicable tests to the plugin, includin
 
 # How to Share Your Scores
 
-- [Read the guide on formatting available in the Announcements page of the Discussions page](https://github.com/amnoah/Minecraft-Server-Benchmark/discussions/6).
+- [Read the guide on formatting available in the Submit Scores section of the Discussions page](https://github.com/amnoah/Minecraft-Server-Benchmark/discussions/9).
 - [Create a discussion in the Submit Scores section of the Discussions page following the formatting rules](https://github.com/amnoah/Minecraft-Server-Benchmark/discussions/categories/submit-scores).
 - Note: Any posts not following proper formatting will be removed.
 
