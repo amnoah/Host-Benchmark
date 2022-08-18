@@ -2,11 +2,12 @@ package am.noah.benchmark.minestom.listener;
 
 import am.noah.benchmark.minestom.BenchmarkPlugin;
 import net.minestom.server.event.EventFilter;
+import net.minestom.server.event.EventListener;
 import net.minestom.server.event.EventNode;
 import net.minestom.server.event.player.PlayerLoginEvent;
 import net.minestom.server.event.trait.PlayerEvent;
 
-public class JoinListener {
+public class JoinListener implements EventListener<PlayerLoginEvent> {
 
     BenchmarkPlugin plugin;
 
@@ -15,10 +16,16 @@ public class JoinListener {
      */
     public JoinListener(BenchmarkPlugin plugin) {
         this.plugin = plugin;
+    }
 
-        EventNode<PlayerEvent> node = EventNode.type("player-listener", EventFilter.PLAYER);
-        node.addListener(PlayerLoginEvent.class, playerLoginEvent -> {
-            plugin.getMinestomBridge().joinEvent();
-        });
+    @Override
+    public Class<PlayerLoginEvent> eventType() {
+        return PlayerLoginEvent.class;
+    }
+
+    @Override
+    public Result run(PlayerLoginEvent event) {
+        plugin.getMinestomBridge().joinEvent();
+        return Result.SUCCESS;
     }
 }

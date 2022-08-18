@@ -3,6 +3,7 @@ package am.noah.benchmark.minestom;
 import am.noah.benchmark.minestom.bridge.MinestomBridge;
 import am.noah.benchmark.minestom.listener.JoinListener;
 import net.minestom.server.MinecraftServer;
+import net.minestom.server.event.GlobalEventHandler;
 import net.minestom.server.extensions.Extension;
 
 public class BenchmarkPlugin extends Extension {
@@ -31,12 +32,16 @@ public class BenchmarkPlugin extends Extension {
      * This allows us to start everything we need to start.
      */
     @Override
-    public void initialize() {
-        JoinListener joinListener = new JoinListener(this);
+    public LoadStatus initialize() {
+
+        GlobalEventHandler geh = MinecraftServer.getGlobalEventHandler();
+        geh.addListener(new JoinListener(this));
 
         minestomBridge = new MinestomBridge(this);
 
         minestomBridge.pluginListSize(MinecraftServer.getExtensionManager().getExtensions().size());
+
+        return LoadStatus.SUCCESS;
     }
 
     /**
