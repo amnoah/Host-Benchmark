@@ -4,6 +4,7 @@ import am.noah.benchmark.core.Benchmark;
 import am.noah.benchmark.core.util.Bridge;
 import am.noah.benchmark.minestom.BenchmarkPlugin;
 import net.minestom.server.MinecraftServer;
+import net.minestom.server.adventure.MinestomAdventure;
 
 public class MinestomBridge extends Bridge {
 
@@ -22,7 +23,7 @@ public class MinestomBridge extends Bridge {
      */
     @Override
     public void log(Object object) {
-        plugin.getLogger().info((String) object);
+        System.out.println("[Benchmark] " + object);
     }
 
     /**
@@ -30,6 +31,7 @@ public class MinestomBridge extends Bridge {
      */
     @Override
     public void stopServer() {
-        MinecraftServer.getServer().stop();
+        MinecraftServer.stopCleanly();
+        System.exit(0);
     }
 }
