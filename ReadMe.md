@@ -26,7 +26,7 @@ You can join the Discord server in order to discuss/help with the Minecraft Serv
 
 # Download
 
-Official Releases: https://github.com/amnoah/Minecraft-Server-Benchmark/releases
-Dev Builds (Jenkins): https://ci.imjustdoom.com/job/Minecraft%20Server%20Benchmark/
+- Official Releases: https://github.com/amnoah/Minecraft-Server-Benchmark/releases
+- Dev Builds (Jenkins): https://ci.imjustdoom.com/job/Minecraft%20Server%20Benchmark/
 
 (Notice: The Minestom implementation available in Dev Builds requires Sabre developer builds)
