@@ -1,11 +1,8 @@
 package am.noah.benchmark.minestom.listener;
 
 import am.noah.benchmark.minestom.BenchmarkPlugin;
-import net.minestom.server.event.EventFilter;
 import net.minestom.server.event.EventListener;
-import net.minestom.server.event.EventNode;
 import net.minestom.server.event.player.PlayerLoginEvent;
-import net.minestom.server.event.trait.PlayerEvent;
 
 public class JoinListener implements EventListener<PlayerLoginEvent> {
 

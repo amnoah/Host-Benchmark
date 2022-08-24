@@ -4,7 +4,6 @@ import am.noah.benchmark.core.Benchmark;
 import am.noah.benchmark.core.util.Bridge;
 import am.noah.benchmark.minestom.BenchmarkPlugin;
 import net.minestom.server.MinecraftServer;
-import net.minestom.server.adventure.MinestomAdventure;
 
 public class MinestomBridge extends Bridge {
 

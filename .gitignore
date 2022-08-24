@@ -26,6 +26,7 @@ hs_err_pid*
 /target
 /bungeecord/target
 /core/target
+/independent/target
 /minestom/target
 /spigot/target
 /velocity/target

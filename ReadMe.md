@@ -1,7 +1,7 @@
 # Minecraft Server Benchmark
 
 Minecraft Server Benchmark is a benchmark system meant to provide a standard for comparing different server hosting services.
-Through the use of one of its implementations you can get a score for both single and multi thread performance based on the processor's ability to perform math at a high speed.
+Through the use of one of its implementations you can get a score for both single and multi thread performance based on the processor's ability to perform intensive string modifications at a high speed.
 It isn't entirely accurate and may vary slightly between runs, but it provides a basis for comparison.
 
 Through the use of Minecraft Server Benchmark you can also get information about the system that the hosting service is running including the operating system, processor, RAM information, and storage device information.
