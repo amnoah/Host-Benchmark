@@ -8,7 +8,7 @@ Unfortunately, it does have its faults. Firstly, the multi-threaded test is appl
 
 # Where Can I Find Scores/Where Can I Submit Scores?
 
-Check out our sister repository, [Minecraft-Benchmark-Results](https://github.com/amnoah/Host-Benchmark-Results).
+Check out our sister repository, [Host-Benchmark-Results](https://github.com/amnoah/Host-Benchmark-Results).
 
 # Join our Discord
 
