@@ -19,7 +19,7 @@ You can join the Discord server in order to discuss/help with the Host Benchmark
 - Download the Jar executable corresponding to your server/proxy platform of choice.
 - Drag and drop the Jar into the plugins folder.
 - Restart the server.
-- Watch for console output - Minecraft Server Benchmark is entirely automated and will begin/stop on its own.
+- Watch for console output - Host Benchmark is entirely automated and will begin/stop on its own.
 
 # Download
 
