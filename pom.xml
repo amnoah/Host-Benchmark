@@ -26,5 +26,6 @@
         <module>minestom</module>
         <module>spigot</module>
         <module>velocity</module>
+        <module>sponge</module>
     </modules>
 </project>

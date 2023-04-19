@@ -1,0 +1,29 @@
+{
+  "loader": {
+    "name": "java_plain",
+    "version": "1.0"
+  },
+  "license": "All Rights Reserved",
+  "plugins": [
+    {
+      "id": "benchmarkplugin",
+      "name": "BenchmarkPlugin",
+      "version": "${version}",
+      "entrypoint": "am.noah.benchmark.sponge.BenchmarkPlugin",
+      "description": "A benchmark plugin for Minecraft.",
+      "branding": {},
+      "links": {
+      },
+      "contributors": [
+      ],
+      "dependencies": [
+        {
+          "id": "spongeapi",
+          "version": "9.0.0",
+          "load-order": "after",
+          "optional": false
+        }
+      ]
+    }
+  ]
+}

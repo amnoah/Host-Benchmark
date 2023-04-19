@@ -32,7 +32,7 @@ public class BenchmarkPlugin extends Extension {
      * This allows us to start everything we need to start.
      */
     @Override
-    public LoadStatus initialize() {
+    public void initialize() {
 
         GlobalEventHandler geh = MinecraftServer.getGlobalEventHandler();
         geh.addListener(new JoinListener(this));
@@ -40,8 +40,6 @@ public class BenchmarkPlugin extends Extension {
         minestomBridge = new MinestomBridge(this);
 
         minestomBridge.pluginListSize(MinecraftServer.getExtensionManager().getExtensions().size());
-
-        return LoadStatus.SUCCESS;
     }
 
     /**
